@@ -44,6 +44,9 @@ for x in open('facebook.blocks'):
 for x in open('google.blocks'):
   allroutes.append((x.split('/'), 'google'))
 
+for x in open('telegram.blocks'):
+  allroutes.append((x.split('/'), 'telegram'))
+
 #for x in open('netflix.blocks'):
 #  allroutes.append((x.split('/'), 'netflix'))
 
@@ -89,6 +92,8 @@ allroutes.append((['104.20.194.50', '32'], ''))
 allroutes.append((['104.20.195.50', '32'], ''))
 # pornhub
 allroutes.append((['66.254.114.41', '32'], ''))
+allroutes.append((['66.254.114.32', '32'], ''))
+allroutes.append((['152.195.33.132', '32'], ''))
 # wikileaks
 allroutes.append((['95.211.113.154', '32'], ''))
 # slideshare
@@ -104,6 +109,12 @@ allroutes.append((['185.199.0.0', '16'], ''))
 allroutes.append((['67.199.248.10','32'], ''))
 # yahoo.co.jp
 allroutes.append((['183.79.0.0', '16'], ''))
+# yahoo.co.jp
+allroutes.append((['157.101.250.65', '32'], ''))
+# www.as-books.jp
+allroutes.append((['211.125.68.12', '32'], ''))
+# www.reuters.com
+allroutes.append((['13.224.29.0', '24'], ''))
 
 
 if len(sys.argv) > 1 and sys.argv[1] == "-sb":

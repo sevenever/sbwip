@@ -1,5 +1,8 @@
-0 0 * * * /home/sevenever/sbwpi/getASBlocks.sh AS32934 > /home/sevenever/sbwpi/facebook.blocks
-0 0 * * * /home/sevenever/sbwpi/getASBlocks.sh AS13414 > /home/sevenever/sbwpi/twitter.blocks
-0 0 * * * /home/sevenever/sbwpi/getASBlocks.sh AS15169 |cut -d'.' -f -2 |sort -u|sed -e 's/$/\.0\.0\/16/' > /home/sevenever/sbwpi/google.blocks
-10 0 * * * cd /home/sevenever/sbwpi && /home/sevenever/sbwpi/vpn_route.py > /home/sevenever/sbwpi/vpn_route.list
-20 0 * * * cd /home/sevenever/sbwpi && /home/sevenever/sbwpi/vpn_route.py -sb > /home/sevenever/sbwpi/sb_route.list
+0 0 * * * /home/sevenever/sbwip/getASBlocks.sh AS62041 > /home/sevenever/sbwip/telegram.blocks
+0 0 * * * /home/sevenever/sbwip/getASBlocks.sh AS44907 >> /home/sevenever/sbwip/telegram.blocks
+0 0 * * * /home/sevenever/sbwip/getASBlocks.sh AS59930 >> /home/sevenever/sbwip/telegram.blocks
+0 0 * * * /home/sevenever/sbwip/getASBlocks.sh AS32934 > /home/sevenever/sbwip/facebook.blocks
+0 0 * * * /home/sevenever/sbwip/getASBlocks.sh AS13414 > /home/sevenever/sbwip/twitter.blocks
+0 0 * * * /home/sevenever/sbwip/getASBlocks.sh AS15169 |cut -d'.' -f -2 |sort -u|sed -e 's/$/\.0\.0\/16/' > /home/sevenever/sbwip/google.blocks
+10 0 * * * cd /home/sevenever/sbwip && /home/sevenever/sbwip/vpn_route.py > /home/sevenever/sbwip/vpn_route.list
+20 0 * * * cd /home/sevenever/sbwip && /home/sevenever/sbwip/vpn_route.py -sb > /home/sevenever/sbwip/sb_route.list
