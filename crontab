@@ -1,8 +1,9 @@
-0 0 * * * /home/sevenever/sbwip/getASBlocks.sh AS62041 > /home/sevenever/sbwip/telegram.blocks
-0 0 * * * /home/sevenever/sbwip/getASBlocks.sh AS44907 >> /home/sevenever/sbwip/telegram.blocks
-0 0 * * * /home/sevenever/sbwip/getASBlocks.sh AS59930 >> /home/sevenever/sbwip/telegram.blocks
-0 0 * * * /home/sevenever/sbwip/getASBlocks.sh AS32934 > /home/sevenever/sbwip/facebook.blocks
-0 0 * * * /home/sevenever/sbwip/getASBlocks.sh AS13414 > /home/sevenever/sbwip/twitter.blocks
-0 0 * * * /home/sevenever/sbwip/getASBlocks.sh AS15169 |cut -d'.' -f -2 |sort -u|sed -e 's/$/\.0\.0\/16/' > /home/sevenever/sbwip/google.blocks
-10 0 * * * cd /home/sevenever/sbwip && /home/sevenever/sbwip/vpn_route.py > /home/sevenever/sbwip/vpn_route.list
-20 0 * * * cd /home/sevenever/sbwip && /home/sevenever/sbwip/vpn_route.py -sb > /home/sevenever/sbwip/sb_route.list
+0 18 * * * /home/seven/sbwip/getASBlocks.sh AS62041 | /home/seven/sbwip/compress_as.py > /home/seven/sbwip/telegram.blocks
+10 18 * * * /home/seven/sbwip/getASBlocks.sh AS44907 | /home/seven/sbwip/compress_as.py >> /home/seven/sbwip/telegram.blocks
+11 18 * * * /home/seven/sbwip/getASBlocks.sh AS59930 | /home/seven/sbwip/compress_as.py >> /home/seven/sbwip/telegram.blocks
+0 18 * * * /home/seven/sbwip/getASBlocks.sh AS32934 | /home/seven/sbwip/compress_as.py > /home/seven/sbwip/facebook.blocks
+0 18 * * * /home/seven/sbwip/getASBlocks.sh AS13414 | /home/seven/sbwip/compress_as.py > /home/seven/sbwip/twitter.blocks
+0 18 * * * /home/seven/sbwip/getASBlocks.sh AS15169 | /home/seven/sbwip/compress_as.py > /home/seven/sbwip/google.blocks
+8 18 * * * /home/seven/sbwip/genips.bash /home/seven/sbwip/sites > /home/seven/sbwip/ips 
+19 18 * * * /home/seven/sbwip/vpn_route.py /home/seven/sbwip | sort | uniq > /home/seven/sbwip/vpn_route.list
+20 18 * * * /home/seven/sbwip/vpn_route.py /home/seven/sbwip -sb | sort | uniq > /home/seven/sbwip/sb_route.list

@@ -74,10 +74,16 @@ allroutes.append((['104.20.195.50', '32'], ''))
 allroutes.append((['64.210.158.0', '24'], ''))
 # github.io
 allroutes.append((['185.199.0.0', '16'], ''))
+# github.com
+allroutes.append((['192.30.255.112', '32'], ''))
+allroutes.append((['192.30.255.113', '32'], ''))
 # yahoo.co.jp
 allroutes.append((['183.79.0.0', '16'], ''))
 # www.as-books.jp
 allroutes.append((['211.125.68.12', '32'], ''))
+# quora.com
+allroutes.append((['18.214.110.0', '24'], 'quora.com'))
+
 
 for l in open(os.path.join(curdir, 'ips')):
   ip, domain = l.strip().split(' ', 1)
